@@ -15,5 +15,9 @@ set hlsearch			" highlight matches
 set incsearch			" incremental search
 set ignorecase			" search is case insensitive
 set smartcase			" ...unless a capital letter is present
+
+"" Other
+set number        " line numbers
+set background=dark
 call pathogen#infect()
-colorscheme wombat
+colorscheme solarized 
