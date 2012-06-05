@@ -1,5 +1,4 @@
 set nocompatible		" incompatibile with legacy vi
-syntax enable
 set encoding=utf-8
 set showcmd			" show incomplete commands
 filetype indent plugin on	" load filetype plugins + indentation
@@ -18,6 +17,8 @@ set smartcase			" ...unless a capital letter is present
 
 "" Other
 set number        " line numbers
-set background=dark
 call pathogen#infect()
-colorscheme solarized 
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
