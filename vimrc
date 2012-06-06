@@ -22,3 +22,4 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+call togglebg#map("<F12>")  " toggle solarized colours using F12
