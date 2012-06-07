@@ -24,10 +24,10 @@ set background=dark
 colorscheme solarized
 call togglebg#map("<F12>")  " toggle solarized colours using F12
 
-"" Netrw
-let g:netrw_liststyle=3   " use tree style for netrw
-let g:netrw_browse_split=2  " open files in new window (vertically)
-let g:netrw_altv=1 " split window to the right
+"" NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif  " open NERDTree if no files specified
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close vim if it is the last buffer open
+nmap <silent> <leader>q :NERDTreeToggle<CR>
 
 set autochdir " automatically set current directory to the current file
 
