@@ -14,12 +14,23 @@ set hlsearch			" highlight matches
 set incsearch			" incremental search
 set ignorecase			" search is case insensitive
 set smartcase			" ...unless a capital letter is present
+nnoremap <esc> :noh<return><esc>  " esc also clears search buffer (removes highlighting)
 
 "" Other
 set number        " line numbers
 call pathogen#infect()
 syntax enable
 set background=dark
-" let g:solarized_termcolors=256
 colorscheme solarized
 call togglebg#map("<F12>")  " toggle solarized colours using F12
+
+"" Netrw
+let g:netrw_liststyle=3   " use tree style for netrw
+let g:netrw_browse_split=2  " open files in new window (vertically)
+let g:netrw_altv=1 " split window to the right
+
+set autochdir " automatically set current directory to the current file
+
+"" Quick reload/edit for vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
