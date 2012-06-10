@@ -34,3 +34,6 @@ set autochdir " automatically set current directory to the current file
 "" Quick reload/edit for vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"" Tagbar
+nmap <silent> <leader>t :TagbarToggle<CR>
