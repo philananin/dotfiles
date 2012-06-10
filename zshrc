@@ -24,9 +24,21 @@ ZSH_THEME="steeef"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git lein ruby brew)
+plugins=(git lein ruby brew command-not-found debian gem)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:/Users/philananin/Dev/scripts
+export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:$HOME/bin
+export PATH="/usr/share/intellij/bin:/usr/share/webstorm/bin:$HOME/.rbenv/bin:$PATH" # todo: not very x-platform
+export NODE_PATH="/usr/local/lib/jsctags/:$NODE_PATH"
+eval "$(rbenv init -)"
+. ~/dev/src/nvm/nvm.sh
+alias sdproj="cd /home/ubuntu/dev/betstream/client/sportsdesk/trunk/"
+alias dotfiles="cd /home/ubuntu/.dotfiles/"
+alias bsproj="cd /home/ubuntu/dev/betstream/server/middleware/branches/restructure"
+alias scripts="cd /home/ubuntu/dev/scripts"
+alias tmux="TERM=screen-256color-bce tmux"
+function mkcd() {
+  [ -n "$1" ] && mkdir -p "$@" && cd "$1";
+}
