@@ -37,3 +37,6 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 "" Tagbar
 nmap <silent> <leader>t :TagbarToggle<CR>
+
+"" Highlight current line
+set cursorline
