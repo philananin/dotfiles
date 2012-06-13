@@ -16,3 +16,6 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/slimv"]
+	path = vim/bundle/slimv
+	url = git://github.com/vim-scripts/slimv.vim.git

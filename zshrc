@@ -24,7 +24,7 @@ ZSH_THEME="steeef"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git lein ruby brew command-not-found debian gem)
+plugins=(git lein ruby brew debian gem)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,12 +32,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:$HOME/bin
 export PATH="/usr/share/intellij/bin:/usr/share/webstorm/bin:$HOME/.rbenv/bin:$PATH" # todo: not very x-platform
 export NODE_PATH="/usr/local/lib/jsctags/:$NODE_PATH"
-eval "$(rbenv init -)"
-. ~/dev/src/nvm/nvm.sh
-alias sdproj="cd /home/ubuntu/dev/betstream/client/sportsdesk/trunk/"
-alias dotfiles="cd /home/ubuntu/.dotfiles/"
-alias bsproj="cd /home/ubuntu/dev/betstream/server/middleware/branches/restructure"
-alias scripts="cd /home/ubuntu/dev/scripts"
+command -v rbenv > /dev/null 2&>1 && eval "$(rbenv init -)"
+[ -e $HOME/dev/src/nvm/nvm.sh ] && . $HOME/dev/src/nvm/nvm.sh
+alias sdproj="cd $HOME/dev/betstream/client/sportsdesk/trunk/"
+alias dotfiles="cd $HOME/.dotfiles/"
+alias bsproj="cd $HOME/dev/betstream/server/middleware/branches/restructure"
+alias scripts="cd $HOME/dev/scripts"
 alias tmux="TERM=screen-256color-bce tmux"
 function mkcd() {
   [ -n "$1" ] && mkdir -p "$@" && cd "$1";
