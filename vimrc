@@ -1,4 +1,5 @@
 set nocompatible		" incompatibile with legacy vi
+call pathogen#infect()
 set encoding=utf-8
 set showcmd			" show incomplete commands
 filetype indent plugin on	" load filetype plugins + indentation
@@ -18,15 +19,16 @@ nnoremap <esc> :noh<return><esc>  " esc also clears search buffer (removes highl
 
 "" Other
 set number        " line numbers
-call pathogen#infect()
 syntax enable
+set laststatus=2  " always show statusline
+set cc=80         " colour column 80
 set background=dark
 colorscheme solarized
 call togglebg#map("<F12>")  " toggle solarized colours using F12
 
 "" NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif  " open NERDTree if no files specified
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close vim if it is the last buffer open
+autocmd VimEnter * NERDTree  
+autocmd VimEnter * wincmd p
 nmap <silent> <leader>q :NERDTreeToggle<CR>
 
 set autochdir " automatically set current directory to the current file
@@ -40,3 +42,10 @@ nmap <silent> <leader>t :TagbarToggle<CR>
 
 "" Highlight current line
 set cursorline
+
+"" Ctrl-P
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
+"" Tags
+set tags=tags;  " search for tags up directories until root
