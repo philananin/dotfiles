@@ -36,7 +36,7 @@ command -v rbenv > /dev/null 2&>1 && eval "$(rbenv init -)"
 [ -e $HOME/dev/src/nvm/nvm.sh ] && . $HOME/dev/src/nvm/nvm.sh
 alias sdproj="cd $HOME/dev/betstream/client/sportsdesk/trunk/"
 alias dotfiles="cd $HOME/.dotfiles/"
-alias bsproj="cd $HOME/dev/betstream/server/middleware/branches/restructure"
+alias bsproj="cd $HOME/dev/betstream/server/middleware/trunk/betstream-parent"
 alias scripts="cd $HOME/dev/scripts"
 alias tmux="TERM=screen-256color-bce tmux"
 function mkcd() {
