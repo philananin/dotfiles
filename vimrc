@@ -1,5 +1,6 @@
 set nocompatible		" incompatibile with legacy vi
 call pathogen#infect()
+call pathogen#helptags()
 set encoding=utf-8
 set showcmd			" show incomplete commands
 filetype indent plugin on	" load filetype plugins + indentation
@@ -52,4 +53,3 @@ set tags=tags;  " search for tags up directories until root
 
 "" Minibufexpl - use <C-[hjkl]> for window nav
 let g:miniBufExplMapWindowNavVim = 1
-
