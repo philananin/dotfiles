@@ -49,3 +49,7 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "" Tags
 set tags=tags;  " search for tags up directories until root
+
+"" Minibufexpl - use <C-[hjkl]> for window nav
+let g:miniBufExplMapWindowNavVim = 1
+
