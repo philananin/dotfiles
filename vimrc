@@ -1,5 +1,6 @@
 set nocompatible		" incompatibile with legacy vi
 call pathogen#infect()
+call pathogen#helptags()
 set encoding=utf-8
 set showcmd			" show incomplete commands
 filetype indent plugin on	" load filetype plugins + indentation
@@ -49,3 +50,4 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "" Tags
 set tags=tags;  " search for tags up directories until root
+
