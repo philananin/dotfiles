@@ -52,3 +52,6 @@
 [submodule "vim/bundle/minibufexpl"]
 	path = vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
+[submodule "vim/bundle/vim-colors-tomorrow"]
+	path = vim/bundle/vim-colors-tomorrow
+	url = git://github.com/chriskempson/vim-tomorrow-theme.git
