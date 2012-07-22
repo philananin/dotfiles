@@ -26,6 +26,7 @@ filetype plugin indent on	" auto detect filetype
 
 "" visual
 set number        " display line numbers
+set rnu " line numbers are relative
 set showmatch " show matching brackets
 set novisualbell " no blinking
 set noerrorbells " no noise
