@@ -1,0 +1,29 @@
+[user]
+	name = Phil Ananin
+	email = phil.ananin@gmail.com
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[url "http://github.com/"]
+  insteadOf = "gh:"
+
+[url "git@github.com:philananin/"]
+  pushInsteadOf = "pa:"
+[url "http://github.com/philananin/"]
+  pushInsteadOf = "pa:"
