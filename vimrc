@@ -33,8 +33,6 @@ set list " display unprintable chars
 set listchars=tab:\ ·,eol:¬
 set listchars+=trail:·
 set listchars+=extends:»,precedes:«
-set background=dark
-colorscheme Tomorrow-Night-Bright
 
 "" Quick reload/edit for vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -49,7 +47,6 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'mattn/zencoding-vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'abudden/TagHighlight'
 Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -63,6 +60,8 @@ Bundle 'duganchen/vim-soy'
 "" themes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+set background=dark
+colorscheme Tomorrow-Night-Bright
 
 "" NERDTree
 Bundle 'scrooloose/nerdtree'

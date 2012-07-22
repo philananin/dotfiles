@@ -1,19 +1,22 @@
 #!/bin/bash
 
-echo "init submodules"
-git submodule init
-git submodule update
-
 echo "delete old dotfiles"
+rm -rf ~/.vim
 rm ~/.vimrc
-rm ~/.vim
 rm ~/.zshrc
 rm ~/.tmux.conf
 
+echo "install vundle"
+mkdir -p ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 echo "create symlinks"
 ln -s $PWD/vimrc ~/.vimrc
-ln -s $PWD/vim ~/.vim
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
+ln -s $PWD/gitconfig ~/.gitconfig
+
+echo "installing vundle packages"
+vim +BundleInstall +qall
 
 echo "done"
