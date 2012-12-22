@@ -51,11 +51,13 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'honza/snipmate-snippets'
+Bundle 'godlygeek/tabular'
 
 "" syntax
 Bundle 'pangloss/vim-javascript'
 Bundle 'JSON.vim'
 Bundle 'duganchen/vim-soy'
+Bundle 'haskell.vim'
 
 "" themes
 Bundle 'altercation/vim-colors-solarized'
@@ -90,5 +92,11 @@ let g:lisp_rainbow=1 " rainbow brackets in lisp
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2  " always show statusline
 let Powerline_symbols = 'fancy'
+
+"" haskell mode
+Bundle 'lukerandall/haskellmode-vim'
+au BufEnter *.hs compiler ghc
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
 
 filetype plugin indent on	" auto detect filetype
