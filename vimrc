@@ -58,6 +58,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'JSON.vim'
 Bundle 'duganchen/vim-soy'
 Bundle 'haskell.vim'
+Bundle 'derekwyatt/vim-scala'
 
 "" themes
 Bundle 'altercation/vim-colors-solarized'
