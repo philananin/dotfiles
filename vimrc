@@ -54,3 +54,4 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
