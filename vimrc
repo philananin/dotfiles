@@ -44,8 +44,7 @@ colorscheme bubblegum
 
 "" NERDTree
 Bundle 'scrooloose/nerdtree'
-autocmd VimEnter * NERDTree  
-autocmd VimEnter * wincmd p
+autocmd vimenter * if !argc() | NERDTree | endif
 nmap <silent> <leader>q :NERDTreeToggle<CR>
 
 "" Ctrl-P
