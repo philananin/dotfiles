@@ -30,7 +30,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-sensible'
 
-""Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 
 "" syntax
 Bundle 'pangloss/vim-javascript'
