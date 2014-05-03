@@ -55,3 +55,13 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 Bundle 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
+
+Bundle 'edkolev/tmuxline.vim'
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'x'    : '#(date)',
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#H'}

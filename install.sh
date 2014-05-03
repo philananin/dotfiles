@@ -14,6 +14,7 @@ echo "create symlinks"
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
+ln -s $PWD/tmuxline.conf ~/.tmuxline.conf
 ln -s $PWD/gitconfig ~/.gitconfig
 
 echo "installing vundle packages"
