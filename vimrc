@@ -64,3 +64,5 @@ let g:tmuxline_preset = {
       \'x'    : '#(date)',
       \'y'    : ['%R', '%a', '%Y'],
       \'z'    : '#H'}
+
+Bundle 'airblade/vim-gitgutter'
