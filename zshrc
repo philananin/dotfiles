@@ -27,16 +27,7 @@ ZSH_THEME="steeef"
 plugins=(git lein ruby brew debian gem vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-
-export PATH=/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin:$HOME/bin
-export PATH="/usr/share/intellij/bin:/usr/share/webstorm/bin:$HOME/.rbenv/bin:$PATH" # todo: not very x-platform
-export NODE_PATH="/usr/local/lib/jsctags/:$NODE_PATH"
-export SCALA_HOME=/usr/local/opt/scala/libexec
-export JAVA_HOME=$(/usr/libexec/java_home)
-export JAVACMD=drip
-export DRIP_SHUTDOWN=30
-export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=128M -XX:MaxPermSize=512M"
-command -v rbenv > /dev/null 2&>1 && eval "$(rbenv init -)"
-
-alias tmux="TERM=screen-256color-bce tmux"
+source ~/.path
+source ~/.exports
+source ~/.aliases
 

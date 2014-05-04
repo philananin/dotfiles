@@ -16,6 +16,9 @@ ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/tmuxline.conf ~/.tmuxline.conf
 ln -s $PWD/gitconfig ~/.gitconfig
+ln -s $PWD/exports ~/.exports
+ln -s $PWD/path ~/.path
+ln -s $PWD/aliases ~/.aliases
 
 echo "installing vundle packages"
 vim +BundleInstall +qall
