@@ -24,5 +24,9 @@ ln -s $PWD/aliases ~/.aliases
 echo "installing vundle packages"
 vim -u ~/.vim/bundles.vim +BundleInstall +qall
 
+if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
+  echo "reloading tmux config"
+  tmux source-file ~/.tmux.conf > /dev/null
+fi
 
 echo "done"
