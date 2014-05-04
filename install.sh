@@ -12,6 +12,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 echo "create symlinks"
 ln -s $PWD/vimrc ~/.vimrc
+ln -s $PWD/bundles.vim ~/.vim/bundles.vim
 ln -s $PWD/zshrc ~/.zshrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/tmuxline.conf ~/.tmuxline.conf
@@ -21,6 +22,7 @@ ln -s $PWD/path ~/.path
 ln -s $PWD/aliases ~/.aliases
 
 echo "installing vundle packages"
-vim +BundleInstall +qall
+vim -u ~/.vim/bundles.vim +BundleInstall +qall
+
 
 echo "done"
