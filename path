@@ -1,4 +1,8 @@
 PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH
 
+# local installations
 PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
+
+# gnu coreutils
+PATH="$PATH":$(brew --prefix coreutils)/libexec/gnubin
