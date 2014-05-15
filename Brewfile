@@ -16,6 +16,7 @@ install macvim --override-system-vim
 
 install ack
 install curl
+install fasd
 install git
 install hub
 install leiningen
