@@ -24,7 +24,7 @@ ZSH_THEME="avit"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git lein ruby brew debian gem vi-mode)
+plugins=(brew fasd gem lein npm tmux vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.path
