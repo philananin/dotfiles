@@ -24,7 +24,7 @@ set cc=80         " highlight column 80
 set list " display unprintable chars
 
 set background=dark
-colorscheme bubblegum
+colorscheme seastone
 
 "" NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
