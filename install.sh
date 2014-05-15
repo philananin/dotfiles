@@ -34,4 +34,7 @@ if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
   tmux source-file ~/.tmux.conf > /dev/null
 fi
 
+echo "installing tmuxinator"
+sudo gem install tmuxinator
+
 echo "done"
