@@ -1,33 +1,20 @@
 #!/bin/bash
 
-echo "delete old dotfiles"
-rm -rf ~/.vim
-rm ~/.vimrc
-rm ~/.zshrc
-rm ~/.tmux.conf
-rm ~/.tmuxline.conf
-rm ~/.gitconfig
-rm ~/.exports
-rm ~/.path
-rm ~/.aliases
+echo "replacing dotfiles"
+currentDir=$(cd $(dirname $0); pwd -P)
+for dotfile in $(find $currentDir -type 'f' -name '.*' -exec basename {} \;); do
+  rm "$HOME/$dotfile"
+  ln -s "$currentDir/$dotfile" "$HOME/$dotfile"
+done
 
-echo "install vundle"
-mkdir -p ~/.vim/bundle/vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+echo "removing old vim installation"
+rm -rf "$HOME/.vim"
 
-echo "create symlinks"
-ln -s $PWD/.vimrc ~/.vimrc
-ln -s $PWD/bundles.vim ~/.vim/bundles.vim
-ln -s $PWD/.zshrc ~/.zshrc
-ln -s $PWD/.tmux.conf ~/.tmux.conf
-ln -s $PWD/.tmuxline.conf ~/.tmuxline.conf
-ln -s $PWD/.gitconfig ~/.gitconfig
-ln -s $PWD/.exports ~/.exports
-ln -s $PWD/.path ~/.path
-ln -s $PWD/.aliases ~/.aliases
-
-echo "installing vundle packages"
-vim -u ~/.vim/bundles.vim +BundleInstall +qall
+echo "installing vundle"
+mkdir -p "$HOME/.vim/bundle/vundle"
+git clone https://github.com/gmarik/vundle.git "$HOME/.vim/bundle/vundle"
+ln -s "$currentDir/bundles.vim" "$HOME/.vim/bundles.vim"
+vim -u "$HOME/.vim/bundles.vim" +BundleInstall +qall
 
 if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
   echo "reloading tmux config"
