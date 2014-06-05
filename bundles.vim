@@ -6,16 +6,27 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/syntastic'
-Plugin 'pangloss/vim-javascript'
-Plugin 'JSON.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'baskerville/bubblegum'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'moll/vim-node'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'gerw/vim-HiLinkTrace'
+
+" themes
+Plugin 'baskerville/bubblegum'
 Plugin 'philananin/seastone.vim'
+Plugin 'gerw/vim-HiLinkTrace'
+
+" javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'JSON.vim'
+Plugin 'moll/vim-node'
+
+" scala
+Plugin 'derekwyatt/vim-scala'
+
+" python
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+

@@ -24,4 +24,7 @@ fi
 echo "installing tmuxp"
 sudo pip install tmuxp
 
+echo "installing jedi"
+sudo pip install jedi
+
 echo "done"
