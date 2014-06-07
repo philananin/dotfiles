@@ -28,5 +28,4 @@ Plugin 'derekwyatt/vim-scala'
 
 " python
 Plugin 'davidhalter/jedi-vim'
-Plugin 'klen/python-mode'
 
