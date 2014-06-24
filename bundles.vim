@@ -47,3 +47,4 @@ Plugin 'derekwyatt/vim-scala'
 
 " python
 Plugin 'davidhalter/jedi-vim'
+Plugin 'hynek/vim-python-pep8-indent'

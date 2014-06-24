@@ -10,8 +10,8 @@ set smartcase			" ...unless a capital letter is present
 "" formatting
 set nowrap			" don't wrap lines
 set textwidth=0 " disable max insert width
-set tabstop=2
-set shiftwidth=2	" a tab is 2 spaces
+set tabstop=4
+set shiftwidth=4	" a tab is 4 spaces
 set expandtab			" use spaces, not tabs
 
 "" visual
