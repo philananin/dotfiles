@@ -29,6 +29,7 @@ let g:tmuxline_preset = {
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'Align'
 
 " themes
 Plugin 'baskerville/bubblegum'
