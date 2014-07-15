@@ -29,3 +29,4 @@ set colorcolumn=80        " highlight column 80
 set list                  " display unprintable chars
 
 let mapleader=","         " change <Leader> from \ to ,
+noremap \ ,
