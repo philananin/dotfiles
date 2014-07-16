@@ -14,7 +14,7 @@ install zsh
 
 install macvim --override-system-vim
 
-install ack
+install clojure
 install curl
 install fasd
 install git
@@ -31,7 +31,9 @@ install redis
 install sbt
 install scala
 install sqlite
+install the_silver_searcher
 install tmux
+install tree
 install wget
 install zsh
 
