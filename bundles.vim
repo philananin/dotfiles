@@ -6,9 +6,6 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-autocmd vimenter * if !argc() | NERDTree | endif
-nmap <silent> <leader>q :NERDTreeToggle<CR>
 
 Plugin 'kien/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
@@ -31,6 +28,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'Align'
+Plugin 'rking/ag.vim'
 
 " themes
 Plugin 'baskerville/bubblegum'
