@@ -30,4 +30,7 @@ sudo pip install jedi
 echo "installing jrnl"
 sudo pip install jrnl
 
+echo "installing jsctags for tern"
+sudo npm install -g git://github.com/ramitos/jsctags.git
+
 echo "done"
