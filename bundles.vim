@@ -5,6 +5,9 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'kien/ctrlp.vim'
@@ -27,7 +30,6 @@ let g:tmuxline_preset = {
 
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'Align'
 Plugin 'rking/ag.vim'
 
