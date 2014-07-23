@@ -1,0 +1,2 @@
+ZSH_THEME="ys"
+plugins=(tmux)

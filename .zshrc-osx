@@ -1,0 +1,2 @@
+ZSH_THEME="avit"
+plugins=(brew fasd gem lein npm tmux vi-mode)
