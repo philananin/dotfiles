@@ -1,2 +1,2 @@
 ZSH_THEME="ys"
-plugins=(tmux fasd)
+plugins=(tmux fasd vi-mode)
