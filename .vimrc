@@ -3,6 +3,9 @@ source ~/.vim/bundles.vim " load Vundle bundles
 "" used in conjunction with Tim Pope's vim-sensible
 "" check ~/.vim/bundle/vim-sensible/plugin/sensible.vim for other settings
 
+set background=dark
+colorscheme seastone
+
 "" general
 set tags=./tags;$HOME     " walk up to ~ to find tags
 set showcmd               " show incomplete commands

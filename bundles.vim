@@ -37,8 +37,6 @@ Plugin 'rking/ag.vim'
 Plugin 'baskerville/bubblegum'
 Plugin 'philananin/seastone.vim'
 Plugin 'gerw/vim-HiLinkTrace'
-set background=dark
-colorscheme seastone
 
 " javascript
 Plugin 'pangloss/vim-javascript'
