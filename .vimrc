@@ -33,3 +33,6 @@ set list                  " display unprintable chars
 
 let mapleader=","         " change <Leader> from \ to ,
 noremap \ ,
+
+" make Y behave like other capitals (D, C etc)
+noremap Y y$
