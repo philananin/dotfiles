@@ -1,0 +1,2 @@
+# gnu coreutils
+PATH="$PATH":$(brew --prefix coreutils)/libexec/gnubin

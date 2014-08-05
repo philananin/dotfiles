@@ -7,5 +7,11 @@ PATH=/usr/local/bin:/usr/local/sbin:"$PATH"
 # home
 PATH="$PATH":~/bin
 
-# gnu coreutils
-PATH="$PATH":$(brew --prefix coreutils)/libexec/gnubin
+case "$OSTYPE" in
+    cygwin*)
+        source ~/.path-cygwin
+        ;;
+    darwin*)
+        source ~/.path-osx
+        ;;
+esac
