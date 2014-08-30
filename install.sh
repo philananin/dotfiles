@@ -33,4 +33,9 @@ sudo pip install jrnl
 echo "installing jsctags for tern"
 sudo npm install -g git://github.com/ramitos/jsctags.git
 
+echo "installing scheme indentation file"
+mkdir -p "$HOME/bin"
+rm "$HOME/bin/scmindent.rkt"
+ln -s "$currentDir/scmindent.rkt" "$HOME/scmindent.rkt"
+
 echo "done"

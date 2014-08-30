@@ -62,3 +62,8 @@ nnoremap <Leader>l :nohlsearch<CR><C-L>
 
 " make Y behave like other capitals
 nnoremap Y y$
+
+" use scmindent.rkt script for scheme indentation (requires racket on path)
+if executable("racket")
+    autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
+endif
