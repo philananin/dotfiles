@@ -21,7 +21,7 @@ set smartcase                  " ...unless a capital letter is present
 set splitright                 " split to the right by default
 set splitbelow                 " split below by default
 set complete-=i                " don't scan included files for completion
-set timeoutlen=300             " wait 300ms for key combinations
+set timeoutlen=500             " wait 500ms for key combinations
 set autoread                   " auto reload file if it has changed elsewhere
 set fileformats+=mac           " consider mac line endings
 set history=1000               " remember 1000 commands
@@ -42,7 +42,6 @@ set ruler                      " show line/col number
 set showcmd                    " show command in last line of screen
 set wildmenu                   " enable command line tab-completion
 set laststatus=2               " last window always has status line
-set number                     " display line numbers
 set relativenumber             " line numbers are relative
 set novisualbell               " no blinking
 set noerrorbells               " no noise
