@@ -7,6 +7,7 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-obsession'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'kien/ctrlp.vim'
