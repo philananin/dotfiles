@@ -18,6 +18,7 @@ install clojure
 install curl
 install fasd
 install git
+install htop-osx
 install hub
 install leiningen
 install mercurial
