@@ -7,7 +7,7 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable
 endif
 
-set t_Co=16                    " 16 color terminal
+set t_Co=256                   " 256 color terminal
 set background=dark
 colorscheme seastone
 
@@ -53,11 +53,19 @@ set display+=lastline          " show as much of last line as possible
 set list                       " display whitespace characters (line below)
 set listchars=tab:>\ ,trail:·,extends:»,precedes:«,nbsp:+,eol:¬
 
-let mapleader=","              " change <Leader> from \ to ,
-noremap \ ,
+" <Space> is also leader
+map <Space> <Leader>
 
 " leader-l removes search highlighting
 nnoremap <Leader>l :nohlsearch<CR><C-L>
+
+" quickly edit/reload vimrc
+nnoremap <Leader>rc :edit $MYVIMRC<CR>
+nnoremap <Leader>rC :source $MYVIMRC<CR>
+
+" i only ever use >> or << anyway, so make that the normal behaviour
+nmap > >>
+nmap < <<
 
 " make Y behave like other capitals
 nnoremap Y y$
