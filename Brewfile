@@ -12,6 +12,8 @@ install findutils
 
 install zsh
 
+install caskroom/cask/brew-cask
+
 install macvim --override-system-vim
 
 install clojure
@@ -38,4 +40,10 @@ install tree
 install wget
 install zsh
 
+tap caskroom/fonts
+install font-inconsolata-dz-for-powerline
+
+# make sure we're in a consistent state
 cleanup
+linkapps
+doctor

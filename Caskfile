@@ -1,15 +1,29 @@
 # install native apps
+# assumes brew-cask is already installed
 # usage: `brew bundle Caskfile`
 
-brew install caskroom/cask/brew-cask
-tap caskroom/versions
+cask install alfred
+cask install android-file-transfer
+cask install bbc-iplayer-downloads
+cask install dropbox
+cask install firefox
+cask install flux-beta
+cask install gimp
+cask install google-chrome
+cask install google-chrome-canary
+cask install google-drive
+cask install keepassx
+cask install lighttable
+cask install minecraft
+cask install racket
+cask install selfcontrol
+cask install skype
+cask install spotify
+cask install steam
+cask install sublime-text3
+cask install transmission
+cask install virtualbox
+cask install vlc
+cask install usb-overdrive
 
-cask install dropbox 2> /dev/null
-cask install google-chrome 2> /dev/null
-cask install google-chrome-canary 2> /dev/null
-#cask install iterm2 2> /dev/null
-cask install sublime-text 2> /dev/null
-cask install transmission 2> /dev/null
-cask install virtualbox 2> /dev/null
-cask install vlc 2> /dev/null
-cask install usb-overdrive 2> /dev/null
+cask alfred link
