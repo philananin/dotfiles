@@ -59,3 +59,6 @@ let g:tslime_ensure_trailing_newlines = 1
 let g:tslime_normal_mapping = '<leader>t'
 let g:tslime_visual_mapping = '<leader>t'
 let g:tslime_vars_mapping = '<leader>T'
+
+" rust
+Plugin 'wting/rust.vim'
