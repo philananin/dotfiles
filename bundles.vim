@@ -8,6 +8,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'kien/ctrlp.vim'
