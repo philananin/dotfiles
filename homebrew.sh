@@ -53,6 +53,7 @@ CASKS=(
     keepassx
     lighttable
     minecraft
+    nosleep
     racket
     selfcontrol
     skype
