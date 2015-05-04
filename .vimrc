@@ -31,8 +31,8 @@ set tabpagemax=50              " allow up to 50 tab pages
 set nowrap                     " don't wrap lines
 set autoindent                 " newlines use current indent
 set textwidth=0                " no max insert width
-set tabstop=4                  " a tab is 4 spaces
-set shiftwidth=4               " use 4 spaces when autoindenting
+set tabstop=2                  " a tab is 4 spaces
+set shiftwidth=2               " use 4 spaces when autoindenting
 set expandtab                  " always use spaces for tabs
 set nrformats-=octal           " don't interpret octal for C-a
 set backspace=indent,eol,start " can backspace over everything
