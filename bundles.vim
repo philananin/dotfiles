@@ -53,7 +53,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'hynek/vim-python-pep8-indent'
 
 " scheme
-Plugin 'amdt/vim-niji'
+Plugin 'luochen1990/rainbow'
 Plugin 'paredit.vim'
 Plugin 'sjl/tslime.vim'
 let g:tslime_ensure_trailing_newlines = 1
