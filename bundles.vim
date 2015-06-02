@@ -43,7 +43,6 @@ Plugin 'gerw/vim-HiLinkTrace'
 Plugin 'pangloss/vim-javascript'
 Plugin 'JSON.vim'
 Plugin 'moll/vim-node'
-Plugin 'marijnh/tern_for_vim'
 
 " scala
 Plugin 'derekwyatt/vim-scala'
