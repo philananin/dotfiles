@@ -38,9 +38,9 @@ FORMULAS=(
 )
 
 CASKS=(
-    alfred
     android-file-transfer
     bbc-iplayer-downloads
+    caffeine
     dropbox
     firefox
     flux-beta
@@ -50,20 +50,20 @@ CASKS=(
     google-chrome
     google-chrome-canary
     google-drive
+    java
     keepassx
-    lighttable
     minecraft
-    nosleep
     racket
     selfcontrol
     skype
+    slack
     spotify
     steam
     sublime-text3
     transmission
+    usb-overdrive
     virtualbox
     vlc
-    usb-overdrive
 )
 
 function setup() {
