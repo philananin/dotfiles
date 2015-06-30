@@ -51,9 +51,16 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'hynek/vim-python-pep8-indent'
 
-" scheme
+" general lisp
+Plugin 'guns/vim-sexp'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'luochen1990/rainbow'
-Plugin 'paredit.vim'
+
+" clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+
+" scheme
 Plugin 'sjl/tslime.vim'
 let g:tslime_ensure_trailing_newlines = 1
 let g:tslime_normal_mapping = '<leader>t'
