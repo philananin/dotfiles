@@ -41,6 +41,7 @@ CASKS=(
     android-file-transfer
     bbc-iplayer-downloads
     caffeine
+    disk-inventory-x
     dropbox
     firefox
     flux-beta
@@ -54,12 +55,10 @@ CASKS=(
     keepassx
     minecraft
     racket
-    selfcontrol
     skype
     slack
     spotify
     steam
-    sublime-text3
     transmission
     usb-overdrive
     virtualbox
