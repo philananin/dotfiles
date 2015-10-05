@@ -23,11 +23,11 @@ sudo pip install tmuxp
 echo "installing jedi"
 sudo pip install jedi
 
-echo "installing jrnl"
-sudo pip install jrnl
-
 echo "installing jsctags for tern"
 sudo npm install -g git://github.com/ramitos/jsctags.git
+
+echo "installing eshint"
+sudo npm install -g eslist
 
 echo "installing scheme indentation file"
 mkdir -p "$HOME/bin"

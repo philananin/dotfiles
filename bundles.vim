@@ -10,6 +10,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/syntastic'
+let g:syntastic_javascript_checkers = ['eslint']
 
 Plugin 'kien/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
