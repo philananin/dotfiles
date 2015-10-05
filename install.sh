@@ -9,6 +9,9 @@ done
 
 source install-vim.sh
 
+echo "installing tmux package manager"
+git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+
 if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
   echo "reloading tmux config"
   tmux source-file ~/.tmux.conf > /dev/null
