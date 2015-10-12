@@ -1,2 +1,4 @@
 # gnu coreutils
 PATH="$PATH":$(brew --prefix coreutils)/libexec/gnubin
+PATH="$PATH":/Applications/Racket\ v6.1/bin
+PATH="$PATH":$(brew --prefix go)/libexec/bin
