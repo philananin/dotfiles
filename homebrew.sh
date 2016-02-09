@@ -55,6 +55,7 @@ CASKS=(
     keepassx
     minecraft
     racket
+    seil
     skype
     slack
     spotify
