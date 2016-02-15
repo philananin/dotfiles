@@ -1,3 +1,4 @@
+set nocompatible
 source ~/.vim/bundles.vim       " load Vundle bundles
 
 if has('autocmd')

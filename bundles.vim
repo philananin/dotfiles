@@ -1,27 +1,25 @@
-set nocompatible		" incompatibile with legacy vi
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/syntastic'
+Plug 'gmarik/vundle'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/syntastic'
 let g:syntastic_javascript_checkers = ['eslint']
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_show_hidden = 1
 
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 
-Plugin 'edkolev/tmuxline.vim'
+Plug 'edkolev/tmuxline.vim'
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
@@ -31,43 +29,42 @@ let g:tmuxline_preset = {
       \'y'    : ['%R', '%a', '%Y'],
       \'z'    : '#H'}
 
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Align'
-Plugin 'rking/ag.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'airblade/vim-gitgutter'
+Plug 'Align'
+Plug 'rking/ag.vim'
 
 " themes
-Plugin 'baskerville/bubblegum'
-Plugin 'philananin/seastone.vim'
-Plugin 'gerw/vim-HiLinkTrace'
+Plug 'baskerville/bubblegum'
+Plug 'philananin/seastone.vim'
+Plug 'gerw/vim-HiLinkTrace'
 
 " javascript
-Plugin 'pangloss/vim-javascript'
-Plugin 'JSON.vim'
-Plugin 'moll/vim-node'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'JSON.vim', { 'for': 'json' }
+Plug 'moll/vim-node', { 'for': 'javascript' }
 
 " scala
-Plugin 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
 " python
-Plugin 'davidhalter/jedi-vim'
-Plugin 'hynek/vim-python-pep8-indent'
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 
 " general lisp
-Plugin 'guns/vim-sexp'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people'
-Plugin 'luochen1990/rainbow'
+Plug 'guns/vim-sexp', { 'for': ['clojure', 'scheme'] }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': ['clojure', 'scheme'] }
+Plug 'luochen1990/rainbow', { 'for': ['clojure', 'scheme'] }
 
 " clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " scheme
-Plugin 'sjl/tslime.vim'
+Plug 'sjl/tslime.vim', { 'for': 'scheme' }
 let g:tslime_ensure_trailing_newlines = 1
 let g:tslime_normal_mapping = '<leader>t'
 let g:tslime_visual_mapping = '<leader>t'
 let g:tslime_vars_mapping = '<leader>T'
 
-" rust
-Plugin 'wting/rust.vim'
+call plug#end()
