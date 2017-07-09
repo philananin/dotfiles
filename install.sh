@@ -3,35 +3,18 @@
 echo "replacing dotfiles"
 currentDir=$(cd $(dirname $0); pwd -P)
 for dotfile in $(find $currentDir -type 'f' -name '.*' -exec basename {} \;); do
-  rm "$HOME/$dotfile"
+  [ -e "$HOME/$dotfile" ] && rm "$HOME/$dotfile"
   ln -s "$currentDir/$dotfile" "$HOME/$dotfile"
 done
-
-source install-vim.sh
-
-echo "installing tmux package manager"
-git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
 if { [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; } then
   echo "reloading tmux config"
   tmux source-file ~/.tmux.conf > /dev/null
 fi
 
-echo "installing tmuxp"
-sudo pip install tmuxp
+echo "Downloading git-prompt.sh"
+curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.git-prompt.sh
 
-echo "installing jedi"
-sudo pip install jedi
-
-echo "installing jsctags for tern"
-sudo npm install -g git://github.com/ramitos/jsctags.git
-
-echo "installing eshint"
-sudo npm install -g eslist
-
-echo "installing scheme indentation file"
-mkdir -p "$HOME/bin"
-rm "$HOME/bin/scmindent.rkt"
-ln -s "$currentDir/scmindent.rkt" "$HOME/scmindent.rkt"
+source ~/.bashrc
 
 echo "done"

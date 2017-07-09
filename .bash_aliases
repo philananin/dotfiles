@@ -3,8 +3,7 @@ alias ...="cd ../.."
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-case "$OSTYPE" in
-    darwin*)
-        source ~/.aliases-osx
-        ;;
-esac
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+

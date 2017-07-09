@@ -16,32 +16,31 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_show_hidden = 1
 
-Plug 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts=1
 
 Plug 'edkolev/tmuxline.vim'
 let g:tmuxline_preset = {
       \'a'    : '#S',
-      \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+      \'b'    : '#(whoami)',
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
-      \'y'    : ['%R', '%a', '%Y'],
+      \'y'    : '%R',
       \'z'    : '#H'}
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
-Plug 'Align'
+Plug 'vim-scripts/Align'
 Plug 'rking/ag.vim'
 
 " themes
-Plug 'baskerville/bubblegum'
-Plug 'philananin/seastone.vim'
+Plug 'chriskempson/base16-vim'
 Plug 'gerw/vim-HiLinkTrace'
 
 " javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'JSON.vim', { 'for': 'json' }
+Plug 'vim-scripts/JSON.vim', { 'for': 'json' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 
 " scala

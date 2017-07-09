@@ -10,7 +10,7 @@ endif
 
 set t_Co=256                   " 256 color terminal
 set background=dark
-colorscheme seastone
+colorscheme base16-default-dark
 
 " general
 set tags=./tags;$HOME          " walk up to ~ to find tags
@@ -70,11 +70,6 @@ nmap < <<
 
 " make Y behave like other capitals
 nnoremap Y y$
-
-" use scmindent.rkt script for scheme indentation (requires racket on path)
-if executable("racket")
-    autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
-endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''

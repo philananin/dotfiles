@@ -1,5 +1,0 @@
-# node - seems to be impossible to install using cygwin... stuck with normal Windows installation
-PATH="$PATH:/cygdrive/c/Program Files/nodejs"
-
-# npm modules
-PATH="$PATH:$(cygpath -u $APPDATA)/npm"
