@@ -66,4 +66,18 @@ let g:tslime_normal_mapping = '<leader>t'
 let g:tslime_visual_mapping = '<leader>t'
 let g:tslime_vars_mapping = '<leader>T'
 
+" YouCompleteMe
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --clang-completer
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 call plug#end()
