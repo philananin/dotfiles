@@ -14,6 +14,8 @@ PACKAGES=(
   python3
   python3-dev
   racket
+  ruby
+  ruby-all-dev
   silversearcher-ag
   scala
   sqlite
