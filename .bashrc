@@ -83,3 +83,5 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 set -o ignoreeof
+
+alias start="cmd.exe /c start"

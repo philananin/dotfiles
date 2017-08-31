@@ -3,3 +3,5 @@
   email = pmana@users.noreply.github.com
 [push]
 	default = simple
+[core]
+	autocrlf = true
