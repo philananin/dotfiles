@@ -5,3 +5,4 @@
 	default = simple
 [core]
 	autocrlf = true
+	excludesfile = ~/.gitignore
