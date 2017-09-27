@@ -84,8 +84,6 @@ export EDITOR="$VISUAL"
 
 set -o ignoreeof
 
-alias start="cmd.exe /c start"
-
 # Set up ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
