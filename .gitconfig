@@ -2,11 +2,11 @@
   name = Phil Ananin
   email = pmana@users.noreply.github.com
 [push]
-	default = simple
+	default = tracking
 [core]
 	autocrlf = true
 	excludesfile = ~/.gitignore
 [alias]
 	co = checkout
-	st = status
+	st = status -sb
 	ci = commit
