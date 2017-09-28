@@ -10,3 +10,7 @@
 	co = checkout
 	st = status -sb
 	ci = commit
+  br = branch
+  ds = diff --staged
+  diff = diff --word-diff
+  a = add -A
