@@ -33,6 +33,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/Align'
 Plug 'rking/ag.vim'
+Plug 'wincent/terminus'
 
 " themes
 Plug 'chriskempson/base16-vim'
