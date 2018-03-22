@@ -7,6 +7,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/syntastic'
 let g:syntastic_javascript_checkers = ['eslint']
 Plug 'mtscout6/syntastic-local-eslint.vim'
@@ -19,14 +20,16 @@ let g:ctrlp_show_hidden = 1
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
+let g:airline_theme='ravenpower'
 
 Plug 'edkolev/tmuxline.vim'
+let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_preset = {
       \'a'    : '#S',
-      \'b'    : '#(whoami)',
+      \'b'    : '%R',
       \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : '%R',
+      \'cwin' : ['#I', '#W'],
+      \'y'    : '#(whoami)',
       \'z'    : '#H'}
 
 Plug 'christoomey/vim-tmux-navigator'

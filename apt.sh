@@ -16,7 +16,6 @@ PACKAGES=(
   racket
   ruby
   ruby-all-dev
-  silversearcher-ag
   scala
   sqlite
   tmux
