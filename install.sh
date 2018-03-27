@@ -15,10 +15,12 @@ fi
 echo "Downloading git-prompt.sh"
 curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.git-prompt.sh
 
-echo "Downloading Ripgrep"
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
-sudo dpkg -i ripgrep_0.8.1_amd64.deb
-rm ripgrep_0.8.1_amd64.deb
+if ! command -v rg 2>/dev/null; then
+  echo "Downloading Ripgrep"
+  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
+  sudo dpkg -i ripgrep_0.8.1_amd64.deb
+  rm ripgrep_0.8.1_amd64.deb
+fi
 
 source ~/.bashrc
 
