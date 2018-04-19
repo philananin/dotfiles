@@ -14,3 +14,13 @@
   ds = diff --staged
   diff = diff --word-diff
   a = add -A
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	trustExitCode = true
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
