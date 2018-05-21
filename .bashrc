@@ -106,3 +106,5 @@ else
     start_agent
 fi
 
+test -f ~/.path && source ~/.path
+
