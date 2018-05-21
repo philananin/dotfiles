@@ -64,6 +64,11 @@ nnoremap <Leader>l :nohlsearch<CR><C-L>
 nnoremap <Leader>rc :edit $MYVIMRC<CR>
 nnoremap <Leader>rC :source $MYVIMRC<CR>
 
+" sugar for yank/paste to system clipboard
+nnoremap <Leader>pp :set paste<CR>o<esc>"+p:set nopaste<CR>
+nnoremap <Leader>yy "+yy
+vnoremap <Leader>y "+y
+
 " i only ever use >> or << anyway, so make that the normal behaviour
 nmap > >>
 nmap < <<
