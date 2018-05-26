@@ -108,3 +108,8 @@ fi
 
 test -f ~/.path && source ~/.path
 
+# 
+AUTOJUMP=/usr/share/autojump/autojump.bash
+if [ -f "$AUTOJUMP" ]; then
+  . "$AUTOJUMP"
+fi

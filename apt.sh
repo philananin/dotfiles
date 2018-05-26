@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGES=(
+  autojump
   build-essential
   cmake
   findutils
