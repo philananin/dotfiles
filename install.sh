@@ -24,4 +24,8 @@ fi
 
 source ~/.bashrc
 
+echo "Installing tmux plugin manager"
+[ -e "$HOME/.tmux/plugins/tpm" ] && rm -rf "$HOME/.tmux/plugins/tpm"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "done"
