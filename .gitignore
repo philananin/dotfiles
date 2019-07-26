@@ -3,3 +3,6 @@ vim/.netrwhist
 Session.vim
 
 .vs/
+.project
+.settings
+.classpath
