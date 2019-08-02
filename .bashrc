@@ -113,3 +113,4 @@ AUTOJUMP=/usr/share/autojump/autojump.bash
 if [ -f "$AUTOJUMP" ]; then
   . "$AUTOJUMP"
 fi
+[ -f ~/.localsettings ] && source ~/.localsettings
