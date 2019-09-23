@@ -27,6 +27,8 @@ set autoread                   " auto reload file if it has changed elsewhere
 set fileformats+=mac           " consider mac line endings
 set history=1000               " remember 1000 commands
 set tabpagemax=50              " allow up to 50 tab pages
+set undofile                   " maintain undo history between sessions
+set undodir=~/.vim/undo        " and keep the undo files in one place
 
 " formatting
 set nowrap                     " don't wrap lines
@@ -47,7 +49,6 @@ set relativenumber             " line numbers are relative
 set novisualbell               " no blinking
 set noerrorbells               " no noise
 set cursorline                 " highlight current line
-set colorcolumn=80             " highlight column 80
 set scrolloff=7                " always show 7 lines under/above current
 set sidescrolloff=5            " always show 5 columns left/right of cursor
 set display+=lastline          " show as much of last line as possible
@@ -57,7 +58,7 @@ set listchars=tab:>\ ,trail:·,extends:»,precedes:«,nbsp:+,eol:¬
 " <Space> is also leader
 map <Space> <Leader>
 
-" leader-l removes search highlighting
+" remove search highlighting
 nnoremap <Leader>l :nohlsearch<CR><C-L>
 
 " quickly edit/reload vimrc
