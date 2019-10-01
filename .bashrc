@@ -9,15 +9,23 @@ case $- in
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+# larger history file size
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+
+# ignore history for commands that definitely won't need to be remembered
+HISTIGNORE='ls:bg:fg:history:ll:..:...:exit'
+
+# set time format for `history` command
+HISTTIMEFORMAT='%F %T '
+
+# standard history behaviour is to write on session termination - instead set a prompt command to record each command to history when issued
+PROMPT_COMMAND='history -a'
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
