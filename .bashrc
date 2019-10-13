@@ -122,3 +122,5 @@ if [ -f "$AUTOJUMP" ]; then
   . "$AUTOJUMP"
 fi
 [ -f ~/.localsettings ] && source ~/.localsettings
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
