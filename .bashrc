@@ -116,11 +116,9 @@ fi
 
 test -f ~/.path && source ~/.path
 
-# 
-AUTOJUMP=/usr/share/autojump/autojump.bash
-if [ -f "$AUTOJUMP" ]; then
-  . "$AUTOJUMP"
-fi
+AUTOJUMP=$(locate autojump.bash | head -n 1)
+[ -f "$AUTOJUMP" ] && source "$AUTOJUMP"
+
 [ -f ~/.localsettings ] && source ~/.localsettings
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
