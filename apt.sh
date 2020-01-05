@@ -2,19 +2,20 @@
 
 PACKAGES=(
   autojump
+  bat
   build-essential
   cmake
+  fd-find
   findutils
   git
   htop
-  mercurial
+  ncdu
   nodejs
   npm
   python
   python-dev
   python3
   python3-dev
-  racket
   ruby
   ruby-all-dev
   scala

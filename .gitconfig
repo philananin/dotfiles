@@ -2,25 +2,26 @@
   name = Phil Ananin
   email = pmana@users.noreply.github.com
 [push]
-	default = tracking
+  default = tracking
 [core]
-	autocrlf = input
-	excludesfile = ~/.gitignore
+  autocrlf = input
+  excludesfile = ~/.gitignore
 [alias]
-	co = checkout
-	st = status -sb
-	ci = commit
+  co = checkout
+  st = status -sb
+  ci = commit
   br = branch
   ds = diff --staged
   diff = diff --word-diff
   a = add -A
+  ll = log --graph --format=\"%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)\"
 [diff]
-	tool = bc3
+  tool = bc3
 [difftool "bc3"]
-	trustExitCode = true
+  trustExitCode = true
 [merge]
-	tool = bc3
+  tool = bc3
 [mergetool "bc3"]
-	trustExitCode = true
+  trustExitCode = true
 [mergetool]
-	keepBackup = false
+  keepBackup = false

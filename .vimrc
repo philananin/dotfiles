@@ -1,4 +1,8 @@
 set nocompatible
+
+scriptencoding utf-8
+set encoding=utf-8
+
 source ~/.vim/bundles.vim       " load Vundle bundles
 
 if has('autocmd')

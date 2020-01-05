@@ -1,0 +1,121 @@
+# https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+
+fzf_find_edit() {
+    local file=$(
+      fzf --query="$1" --no-multi --select-1 --exit-0 \
+          --preview 'bat --color=always --line-range :500 {}'
+      )
+    if [[ -n $file ]]; then
+        $EDITOR "$file"
+    fi
+}
+
+alias ffe='fzf_find_edit'
+
+fzf_change_directory() {
+    local directory=$(
+      fd --type d | \
+      fzf --query="$1" --no-multi --select-1 --exit-0 \
+          --preview 'tree -C {} | head -100'
+      )
+    if [[ -n $directory ]]; then
+        cd "$directory"
+    fi
+}
+
+alias fcd='fzf_change_directory'
+
+fzf_grep_edit(){
+    if [[ $# == 0 ]]; then
+        echo 'Error: search term was not provided.'
+        return
+    fi
+    local match=$(
+      rg --color=never --line-number "$1" |
+        fzf --no-multi --delimiter : \
+            --preview "bat --color=always --line-range {2}: {1}"
+      )
+    local file=$(echo "$match" | cut -d':' -f1)
+    if [[ -n $file ]]; then
+        $EDITOR "$file" +$(echo "$match" | cut -d':' -f2)
+    fi
+}
+
+alias fge='fzf_grep_edit'
+
+fzf_kill() {
+    local pid_col
+    if [[ $OS = Linux ]]; then
+        pid_col=2
+    elif [[ $OS = Darwin ]]; then
+        pid_col=3;
+    else
+        echo 'Error: unknown platform'
+        return
+    fi
+    local pids=$(
+      ps -f -u $USER | sed 1d | fzf --multi | tr -s [:blank:] | cut -d' ' -f"$pid_col"
+      )
+    if [[ -n $pids ]]; then
+        echo "$pids" | xargs kill -9 "$@"
+    fi
+}
+
+alias fkill='fzf_kill'
+
+fzf_git_add() {
+    local selections=$(
+      git status --porcelain | \
+      fzf --ansi \
+          --preview 'if (git ls-files --error-unmatch {2} &>/dev/null); then
+                         git diff --color=always {2}
+                     else
+                         bat --color=always --line-range :500 {2}
+                     fi'
+      )
+    if [[ -n $selections ]]; then
+        git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
+    fi
+}
+
+alias gadd='fzf_git_add'
+
+fzf_git_log() {
+    local selections=$(
+      git ll --color=always "$@" |
+        fzf --ansi --no-sort --height 100% \
+            --preview "echo {} | grep -o '[a-f0-9]\{7\}' | head -1 |
+                       xargs -I@ sh -c 'git show --color=always @'"
+      )
+    if [[ -n $selections ]]; then
+        local commits=$(echo "$selections" | cut -d' ' -f2 | tr '\n' ' ')
+        git show $commits
+    fi
+}
+
+alias gll='fzf_git_log'
+
+fzf_git_log_pickaxe() {
+     if [[ $# == 0 ]]; then
+         echo 'Error: search term was not provided.'
+         return
+     fi
+     local selections=$(
+       git log --oneline --color=always -S "$@" |
+         fzf --ansi --no-sort --height 100% \
+             --preview "git show --color=always {1}"
+       )
+     if [[ -n $selections ]]; then
+         local commits=$(echo "$selections" | cut -d' ' -f1 | tr '\n' ' ')
+         git show $commits
+     fi
+ }
+
+alias glS='fzf_git_log_pickaxe'
+
+export FZF_DEFAULT_COMMAND='fdfind --type f --color=never'
+export FZF_ALT_C_COMMAND='fdfind --type d --color=never'
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :500 {}'"
+export FZF_DEFAULT_OPTS='--height 75% --multi --reverse'

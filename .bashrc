@@ -121,4 +121,5 @@ AUTOJUMP=$(locate autojump.bash | head -n 1)
 
 [ -f ~/.localsettings ] && source ~/.localsettings
 
+[ -f ~/.fzf.local ] && source ~/.fzf.local
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
