@@ -3,13 +3,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-commentary'                     " comment stuff easily
 Plug 'tpope/vim-repeat'                         " enable . repeating for some plugins
-Plug 'tpope/vim-surround'                       " improve quoting/parenthesizing
 Plug 'tpope/vim-speeddating'                    " enable <C-a> and <C-x> on dates
 Plug 'tpope/vim-vinegar'                        " enhance netrw
 Plug 'tpope/vim-unimpaired'                     " mappings around brackets
 Plug 'tpope/vim-fugitive'                       " git integration
 Plug 'vim-airline/vim-airline'                  " airline bar underneath vim pane
 Plug 'vim-airline/vim-airline-themes'
+Plug 'machakann/vim-sandwich'                   " improve quoting/parenthesizing
 let g:airline_powerline_fonts=1
 let g:airline_theme='ravenpower'
 Plug 'edkolev/tmuxline.vim'                     " synchronise airline with tmux display
